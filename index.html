@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ARS — Museo</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <div class="header-left">
+      <img class="logo-mini" src="ARS carpeta/Logo ARS.png" alt="Logo ARS">
+      <input class="searchbox" id="search-input" placeholder="Buscar obras, artistas, historias..." aria-label="buscar">
+    </div>
+
+    <div class="header-right">
+      <div class="icon-opts" aria-hidden="false">
+        <button class="icon-btn" title="Información" aria-label="Información" onclick="showPage('info')">i</button>
+        <button class="icon-btn" title="Cuenta" aria-label="Cuenta" onclick="showPage('account')">◯</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="logo-ars" onclick="showPage('home')">ARS</div>
+  <div class="subtitle">"El viento eterno del color y la historia."</div>
+  <div class="logo-underline"></div>
+
+  <div class="frames-strip" aria-hidden="true">
+    <div class="frames-inner">
+      <div class="frame" style="background-image:url('ARS carpeta/La noche estrellada.png')" title="La noche estrellada"></div>
+      <div class="frame" style="background-image:url('ARS carpeta/La joven de la perla.png')" title="La joven de la perla"></div>
+      <div class="frame" style="background-image:url('ARS carpeta/Las meninas.png')" title="Las meninas"></div>
+      <div class="frame" style="background-image:url('ARS carpeta/El grito.png')" title="El grito"></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="home" class="page active">
+    <div class="welcome" style="margin-top:18px">
+      <div class="welcome-left" style="background-image:url('ARS carpeta/ars nace.png')">
+        <div class="bigtext" aria-hidden="true">Bienvenido<br>a<br>ARS</div>
+      </div>
+
+      <aside class="welcome-right">
+        <div class="intro-title">En ARS</div>
+        <p class="intro-text muted">veneramos el arte que trasciende el tiempo. Navega entre pinceladas antiguas, historias que susurran y colores que aún vibran.</p>
+        <div class="brush-ico" style="background-image:url('ARS carpeta/10 cuadros más vistos.png')" aria-hidden="true"></div>
+        <div class="actions">
+          <button class="btn-outline" onclick="showPage('ars')">Ver ARS</button>
+        </div>
+      </aside>
+    </div>
+
+    <div class="hist-hero">
+      <div class="bg" style="background-image:url('ARS carpeta/Historias.png')"></div>
+      <div class="content">
+        <div>
+          <h3>Historias</h3>
+          <p class="muted">Lee, mira y escucha historias inspiradoras sobre arte y creatividad.</p>
+          <button class="btn-primary" onclick="showPage('historias')">Ver más →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="descubre">
+      <div class="left">
+        <h2>Descubre el arte que respira eternidad.</h2>
+        <p class="muted">Lee, mira y escucha historias inspiradoras sobre arte y creatividad.</p>
+        <a class="cta" href="#" onclick="showPage('historias');return false;">Explora por artistas, épocas y emociones</a>
+      </div>
+
+      <div class="hero-wrap">
+        <img class="hero-img" src="ARS carpeta/Historias destacadas.png" alt="Banner">
+      </div>
+    </div>
+
+    <div class="artistas">
+      <div class="left">
+        <div class="section-title">Algunos de nuestros artistas favoritos !!</div>
+        <button class="btn-outline" onclick="showPage('artists')">Ver más</button>
+      </div>
+
+      <div class="right">
+        <div class="artist-card">
+          <img src="ARS carpeta/Los girasoles.png" alt="Los girasoles">
+          <div>
+            <strong>Vincent van Gogh</strong>
+            <div class="muted">Postimpresionista • Los girasoles, Noche estrellada</div>
+          </div>
+        </div>
+
+        <div class="artist-card">
+          <img src="ARS carpeta/La joven de la perla.png" alt="La joven de la perla">
+          <div>
+            <strong>Rembrandt</strong>
+            <div class="muted">Barroco • Maestro del claroscuro</div>
+          </div>
+        </div>
+
+        <div class="artist-card">
+          <img src="ARS carpeta/Las meninas.png" alt="Las meninas">
+          <div>
+            <strong>Johannes Vermeer</strong>
+            <div class="muted">Barroco neerlandés • Experto en la luz</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-text muted">© ARS — Museo • Reemplaza imágenes por tus assets cuando puedas</div>
+    </footer>
+  </section>
+
+  <section id="ars" class="page">
+    <div class="page-header">
+      <h2>ARS</h2>
+      <button class="btn-outline" onclick="showPage('home')">Volver</button>
+    </div>
+
+    <div class="two-grid">
+      <div class="card">
+        <h3>Misión</h3>
+        <p class="muted">Promover y difundir la historia del arte a través de experiencias digitales y contenidos didácticos.</p>
+      </div>
+
+      <div class="card image-card">
+        <img src="ARS carpeta/Misión – Visión.png" alt="Misión Visión">
+      </div>
+    </div>
+  </section>
+
+  <section id="historias" class="page">
+    <div class="page-header">
+      <h2>Historias</h2>
+      <button class="btn-outline" onclick="showPage('home')">Volver</button>
+    </div>
+
+    <div class="grid-2-sidebar">
+      <div>
+        <article class="historia-box">
+          <h3>El pintor y su paleta</h3>
+          <p class="muted">Un breve relato sobre técnicas y colores que inspiraron obras maestras.</p>
+          <p><button class="btn-outline" onclick="showPage('detalle-pintura')">Ver obra</button></p>
+        </article>
+
+        <article class="historia-box">
+          <h3>La ciudad y la luz</h3>
+          <p class="muted">Relatos de paisajes y atardeceres que cambiaron la pintura.</p>
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <strong>Explora por épocas</strong>
+        <ul class="muted">
+          <li>Renacimiento</li>
+          <li>Barroco</li>
+          <li>Impresionismo</li>
+          <li>Modernismo</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="detalle-pintura" class="page">
+    <div class="page-header">
+      <h2>Detalle de la obra</h2>
+      <button class="btn-outline" onclick="showPage('historias')">Volver</button>
+    </div>
+
+    <div class="detail-wrap">
+      <img class="detail-img" src="ARS carpeta/Los girasoles.png" alt="Los girasoles">
+      <div class="detail-text">
+        <h3>Girasoles — Van Gogh</h3>
+        <p class="muted">Óleo sobre lienzo — 1888. Historia y descripción extensa de la obra, su contexto y técnicas.</p>
+        <p><button class="btn-primary" onclick="showPage('home')">Volver al inicio</button></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="artists" class="page">
+    <div class="page-header">
+      <h2>Artistas</h2>
+      <button class="btn-outline" onclick="showPage('home')">Volver</button>
+    </div>
+
+    <div class="artists-grid">
+      <div class="artist-card-grid">
+        <img src="ARS carpeta/Los girasoles.png" alt="Van Gogh">
+        <strong>Van Gogh</strong>
+        <p class="muted">Postimpresionista</p>
+      </div>
+
+      <div class="artist-card-grid">
+        <img src="ARS carpeta/La joven de la perla.png" alt="Rembrandt">
+        <strong>Rembrandt</strong>
+        <p class="muted">Barroco</p>
+      </div>
+
+      <div class="artist-card-grid">
+        <img src="ARS carpeta/Las meninas.png" alt="Vermeer">
+        <strong>Vermeer</strong>
+        <p class="muted">Barroco neerlandés</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="info" class="page">
+    <div class="page-header">
+      <h2>Información</h2>
+      <button class="btn-outline" onclick="showPage('home')">Volver</button>
+    </div>
+
+    <div class="card">
+      <p class="muted">Créditos, referencias y notas sobre la colección ARS.</p>
+      <img src="ARS carpeta/10 cuadros más vistos.png" alt="10 cuadros" class="full-img">
+    </div>
+  </section>
+
+
+  <section id="search" class="page">
+    <div class="page-header">
+      <h2>Resultados de búsqueda</h2>
+      <button class="btn-outline" onclick="showPage('home')">Volver</button>
+    </div>
+
+    <div id="search-results" class="search-results"></div>
+  </section>
+
+</main>
+
+<script>
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+document.addEventListener('DOMContentLoaded', ()=> showPage('home'));
+
+
+(function(){
+  const searchInput = document.getElementById('search-input');
+  const resultContainer = document.getElementById('search-results');
+
+  function clearResults(){ resultContainer.innerHTML = ''; }
+
+  function renderResults(items){
+    clearResults();
+    if(items.length === 0){
+      resultContainer.innerHTML = '<p class="muted">No se encontraron resultados.</p>';
+      return;
+    }
+    items.forEach(it => {
+      const el = document.createElement('div');
+      el.className = 'result-item';
+      el.innerHTML = `<div class="result-tag">${it.tag}</div><div class="result-text">${it.text}</div>`;
+      resultContainer.appendChild(el);
+    });
+  }
+
+  function gatherSearchable(){
+  
+    const nodes = [];
+    document.querySelectorAll('#home h2, #home h3, #home p, section h2, section h3, section p, .artist-card strong, .artist-card-grid strong, li').forEach(n => nodes.push(n));
+    return nodes;
+  }
+
+  function runSearch(q){
+    if(!q || q.length < 2) return [];
+    const nodes = gatherSearchable();
+    const res = [];
+    nodes.forEach(node => {
+      const txt = node.innerText.trim();
+      if(txt.toLowerCase().includes(q.toLowerCase())){
+        res.push({ tag: node.tagName.toLowerCase(), text: txt });
+      }
+    });
+    return res;
+  }
+
+  
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+      const q = e.target.value.trim();
+      const items = runSearch(q);
+      renderResults(items);
+      showPage('search');
+    }
+  });
+
+ 
+  let typingTimer;
+  searchInput.addEventListener('input', function(){
+    clearTimeout(typingTimer);
+    const q = this.value.trim();
+    if(q.length < 2) {
+
+      return;
+    }
+    typingTimer = setTimeout(()=> {
+      const items = runSearch(q);
+      renderResults(items);
+      showPage('search');
+    }, 400);
+  });
+})();
+</script>
+
+</body>
+</html>
